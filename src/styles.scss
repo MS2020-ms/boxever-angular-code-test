@@ -1,0 +1,37 @@
+@import '~bootstrap/scss/bootstrap';
+// Set the full page height so we can stick the footer to the bottom
+$white: #fff;
+$background: #f7f7f7;
+$text-color: #252422;
+$font-family: 'Roboto', sans-serif;
+
+html,
+body {
+  background: $background;
+  height: 100%;
+  font-family: $font-family;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+  background-color: $white;
+  color: $text-color;
+  margin-bottom: 20px;
+  position: relative;
+  border: 0 none;
+  transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.card-stats {
+  .card-body {
+    padding: 15px 15px 0;
+  }
+}

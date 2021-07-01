@@ -1,0 +1,110 @@
+[
+  {
+    "manufacturer": "Ferrari",
+    "ref": "07e9548b-f35e-4e00-99d7-e49b5fb08907",
+    "model": "SF90 Stradale",
+    "price": "$507,000",
+    "0-60_mph": "2.5s",
+    "top_speed": "211 mph",
+    "img_url": "/assets/images/ferrari_sf90_stradale.webp"
+  },
+  {
+    "manufacturer": "Ferrari",
+    "ref": "62343d00-1503-43fb-9db4-80cd06d24345",
+    "model": "Roma",
+    "price": "$222,630",
+    "0-60_mph": "3.4s",
+    "top_speed": "199 mph",
+    "img_url": "/assets/images/ferrari_roma.webp"
+  },
+  {
+    "manufacturer": "Ferrari",
+    "ref": "91d0a29b-f352-47a1-a2b7-1b21f4e8d187",
+    "model": "F8 Tributo",
+    "price": "$276,000",
+    "0-60_mph": "2.9s",
+    "top_speed": "211 mph",
+    "img_url": "/assets/images/ferrari_f8_tributo.webp"
+  },
+  {
+    "manufacturer": "Aston Martin",
+    "ref": "6eddfc34-0fbd-42da-afd8-6d52566ab5a1",
+    "model": "DB11",
+    "price": "$198,995",
+    "0-60_mph": "3.7s",
+    "top_speed": "208 mph",
+    "img_url": "/assets/images/aston_martin_db11.webp"
+  },
+  {
+    "manufacturer": "Bugatti",
+    "ref": "8c3c304b-b7ca-4155-af05-e6e29bfe89e0",
+    "model": "Chiron",
+    "price": "$3,000,000",
+    "0-60_mph": "2.4s",
+    "top_speed": "261 mph",
+    "img_url": "/assets/images/bugatti_chiron.webp"
+  },
+  {
+    "manufacturer": "Aston Martin",
+    "ref": "b53806b2-1774-45e6-b273-68cee9571399",
+    "model": "DBS Superleggera",
+    "price": "$304,995",
+    "0-60_mph": "3.4s",
+    "top_speed": "211 mph",
+    "img_url": "/assets/images/aston_martin_dbs_superleggera.webp"
+  },
+  {
+    "manufacturer": "Lamborghini",
+    "ref": "de65dac3-bc15-413c-b9f6-93079c9eba8f",
+    "model": "Aventador",
+    "price": "$425,000",
+    "0-60_mph": "2.9s",
+    "top_speed": "217 mph",
+    "img_url": "/assets/images/lamborghini_aventador.webp"
+  },
+  {
+    "manufacturer": "Lamborghini",
+    "ref": "501d25e3-6cc0-4d85-a816-b8d25275c4b9",
+    "model": "Huracan Evo",
+    "price": "$267,500",
+    "0-60_mph": "2.9s",
+    "top_speed": "202 mph",
+    "img_url": "/assets/images/lamborghini_huracan_evo.webp"
+  },
+  {
+    "manufacturer": "Porsche",
+    "ref": "79204036-aa35-405b-8030-f1562d7a4f18",
+    "model": "911",
+    "price": "$115,100",
+    "0-60_mph": "3.5s",
+    "top_speed": "191 mph",
+    "img_url": "/assets/images/porsche_911.webp"
+  },
+  {
+    "manufacturer": "Maserati",
+    "ref": "863618e2-60fa-4742-8824-9cdd4b16a294",
+    "model": "Ghibli",
+    "price": "$74,390",
+    "0-60_mph": "5.5s",
+    "top_speed": "166 mph",
+    "img_url": "/assets/images/maserati_ghibli.jpg"
+  },
+  {
+    "manufacturer": "McLaren",
+    "ref": "f69caf5d-ee90-4b62-b5da-bea3f3646949",
+    "model": "Senna",
+    "price": "$960,000",
+    "0-60_mph": "2.8s",
+    "top_speed": "211 mph",
+    "img_url": "/assets/images/mclaren_senna.png"
+  },
+  {
+    "manufacturer": "Koenigsegg",
+    "ref": "b61bea5b-4eda-4401-bfeb-aafad3f24e8f",
+    "model": "Regera",
+    "price": "$1,900,000",
+    "0-60_mph": "2.5s",
+    "top_speed": "250 mph",
+    "img_url": "/assets/images/koenigsegg_regera.jpg"
+  }
+]
