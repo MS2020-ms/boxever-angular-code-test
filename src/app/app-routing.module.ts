@@ -20,6 +20,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./pages/my-favourites/my-favourites.module').then((m) => m.MyFavouritesModule),
       },
+      {
+        path: 'compare-cars',
+        loadChildren: () =>
+          import('./pages/compare-cars/compare-cars.module').then((m) => m.CompareCarsModule),
+      },
     ],
   },
   { path: '**', component: Error404Component },
