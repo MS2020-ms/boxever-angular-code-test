@@ -8,18 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownComponent implements OnInit {
 
-  selectedOption: string;
-
-  constructor() {
-    this.selectedOption = 'all';
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  onChange($event) {
-    this.selectedOption = $event.target.value;
-    console.log($event.target.value);
-  }
+
 
 }

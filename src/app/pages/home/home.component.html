@@ -1,7 +1,13 @@
 <div class="container mt-3 mt-md-5">
   <div class="jumbotron">
     <h3>Find Your Next Car</h3>
-    <app-dropdown></app-dropdown>
+    <!-- <app-dropdown></app-dropdown> -->
+    <select class="form-control mb-3" (change)="onChange($event)">
+      <option disable value="all">Sort by</option>
+      <option value="manufacturerName">Manufacturer name</option>
+      <option value="lowestPrice">Lowest price</option>
+      <option value="highestPrice">Highest price</option>
+    </select>
   </div>
 
   <div class="row">
@@ -15,7 +21,7 @@
             <div class="col-12 mt-3">
               <div class="numbers">
                 <h5 class="pb-3">{{car.manufacturer}} {{car.model}}</h5>
-                <p><b>Price:</b> {{car.price}}</p>
+                <p><b>Price:</b> {{car.price | currency}}</p>
                 <p><b>Top Speed:</b> {{car.top_speed}}</p>
                 <p><b>0-60 mph:</b> {{car['from0to60_mph']}}</p>
               </div>

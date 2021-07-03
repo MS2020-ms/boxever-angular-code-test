@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from 'src/app/interfaces/car.interface';
-import { CarService } from './../../car.service';
+import { SearchService } from 'src/app/services/search.service';
+import { CarService } from './../../services/car.service';
 
 @Component({
   selector: 'app-home',
@@ -10,21 +11,33 @@ import { CarService } from './../../car.service';
 export class HomeComponent implements OnInit {
   cars: Car[];
 
-  constructor(private carService: CarService) {
+  constructor(private carService: CarService, private searchService: SearchService) {
     this.cars = [];
   }
 
   ngOnInit(): void {
     this.carService.list().subscribe(response => {
       this.cars = response;
-      this.sortOn();
+      this.sortOnAlpha();
     });
 
   }
 
-  sortOn() {
+  sortOnAlpha() {
     let field = 'manufacturer';
-    console.log(this.cars.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString())));
+    this.cars.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString()));
+  }
+
+  sortHighestPrice() {
+    let field = 'price';
+    this.cars.sort((a, b) =>
+      b.price - a.price)
+  }
+
+  sortLowestPrice() {
+    let field = 'price';
+    this.cars.sort((a, b) =>
+      a.price - b.price)
   }
 
   addToFavourites(ref) {
@@ -44,6 +57,19 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  onChange($event) {
+    // console.log($event.target.value);
+    if ($event.target.value === 'manufacturerName') {
+      this.sortOnAlpha();
+    } else if ($event.target.value === 'lowestPrice') {
+      this.sortLowestPrice();
+    } else if ($event.target.value === 'highestPrice') {
+      this.sortHighestPrice();
+    };
+  }
+
+}
+
   // testLocalStorage() {
   //   //!
   //   const existingFavourites = localStorage.getItem('favouriteCars');
@@ -62,4 +88,4 @@ export class HomeComponent implements OnInit {
   //   }
   // }
 
-}
+
