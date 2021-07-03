@@ -14,10 +14,13 @@ export class HomeComponent implements OnInit {
     this.carService.list().subscribe(response => {
       this.cars = response;
     });
+    //!
+    // this.testLocalStorage();
   }
 
   addToFavourites(ref) {
     this.cars.find(item => item.ref === ref).inFavourites = true;
+    //!
     const existingFavourites = localStorage.getItem('favouriteCars');
     if (existingFavourites) {
       try {
@@ -25,11 +28,29 @@ export class HomeComponent implements OnInit {
         parsedFavourites.push(ref);
         localStorage.setItem('favouriteCars', JSON.stringify(parsedFavourites));
       } catch {
-        throw('Failed to parse favourites');
+        throw ('Failed to parse favourites');
       }
     } else {
       localStorage.setItem('favouriteCars', JSON.stringify([ref]));
     }
   }
+
+  // testLocalStorage() {
+  //   //!
+  //   const existingFavourites = localStorage.getItem('favouriteCars');
+  //   const parsedFavourites = JSON.parse(existingFavourites);
+
+  //   console.log(parsedFavourites);
+
+  //   for (let i = 0; i < parsedFavourites.length; i++) {
+
+  //     console.log(parsedFavourites[i]);
+
+  //     if (this.cars.find(item => item.ref === parsedFavourites[i])) {
+  //       console.log('ok');
+
+  //     }
+  //   }
+  // }
 
 }

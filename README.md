@@ -54,3 +54,13 @@ Things you might consider:
 * could TypeScript be used more effectively? 
 
 Please provide a short summary on your thoughts.
+
+###
+
+- Crear carpeta interface
+- Crear car.interface.ts
+- Crear carpeta components y modulo
+- >ng g m components/components --flat
+- Crear componente (vinculado al modulo anterior y NO al app.module.ts)
+- >ng g c components/dropdown --skipTests -is
+- Exportar en components.module para utilizarlo en otros componentes -> progress

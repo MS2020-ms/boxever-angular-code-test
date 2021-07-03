@@ -9,14 +9,14 @@
         <div class="card-body pt-0">
           <div class="row">
             <div class="col-12 p-0">
-              <img src="{{car.img_url}}" alt="{{car.manufacturer}} {{car.model}}"/>
+              <img src="{{car.img_url}}" alt="{{car.manufacturer}} {{car.model}}" />
             </div>
             <div class="col-12 mt-3">
               <div class="numbers">
                 <h5 class="pb-3">{{car.manufacturer}} {{car.model}}</h5>
                 <p><b>Price:</b> {{car.price}}</p>
                 <p><b>Top Speed:</b> {{car.top_speed}}</p>
-                <p><b>0-60 mph:</b> {{car['0-60_mph']}}</p>
+                <p><b>0-60 mph:</b> {{car['from0to60_mph']}}</p>
               </div>
             </div>
           </div>
