@@ -6,7 +6,8 @@
     "price": "$507,000",
     "from0to60_mph": "2.5s",
     "top_speed": "211 mph",
-    "img_url": "/assets/images/ferrari_sf90_stradale.webp"
+    "img_url": "/assets/images/ferrari_sf90_stradale.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Ferrari",
@@ -15,7 +16,8 @@
     "price": "$222,630",
     "from0to60_mph": "3.4s",
     "top_speed": "199 mph",
-    "img_url": "/assets/images/ferrari_roma.webp"
+    "img_url": "/assets/images/ferrari_roma.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Ferrari",
@@ -24,7 +26,8 @@
     "price": "$276,000",
     "from0to60_mph": "2.9s",
     "top_speed": "211 mph",
-    "img_url": "/assets/images/ferrari_f8_tributo.webp"
+    "img_url": "/assets/images/ferrari_f8_tributo.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Aston Martin",
@@ -33,7 +36,8 @@
     "price": "$198,995",
     "from0to60_mph": "3.7s",
     "top_speed": "208 mph",
-    "img_url": "/assets/images/aston_martin_db11.webp"
+    "img_url": "/assets/images/aston_martin_db11.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Bugatti",
@@ -42,7 +46,8 @@
     "price": "$3,000,000",
     "from0to60_mph": "2.4s",
     "top_speed": "261 mph",
-    "img_url": "/assets/images/bugatti_chiron.webp"
+    "img_url": "/assets/images/bugatti_chiron.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Aston Martin",
@@ -51,7 +56,8 @@
     "price": "$304,995",
     "from0to60_mph": "3.4s",
     "top_speed": "211 mph",
-    "img_url": "/assets/images/aston_martin_dbs_superleggera.webp"
+    "img_url": "/assets/images/aston_martin_dbs_superleggera.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Lamborghini",
@@ -60,7 +66,8 @@
     "price": "$425,000",
     "from0to60_mph": "2.9s",
     "top_speed": "217 mph",
-    "img_url": "/assets/images/lamborghini_aventador.webp"
+    "img_url": "/assets/images/lamborghini_aventador.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Lamborghini",
@@ -69,7 +76,8 @@
     "price": "$267,500",
     "from0to60_mph": "2.9s",
     "top_speed": "202 mph",
-    "img_url": "/assets/images/lamborghini_huracan_evo.webp"
+    "img_url": "/assets/images/lamborghini_huracan_evo.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Porsche",
@@ -78,7 +86,8 @@
     "price": "$115,100",
     "from0to60_mph": "3.5s",
     "top_speed": "191 mph",
-    "img_url": "/assets/images/porsche_911.webp"
+    "img_url": "/assets/images/porsche_911.webp",
+    "inFavourites": false
   },
   {
     "manufacturer": "Maserati",
@@ -87,7 +96,8 @@
     "price": "$74,390",
     "from0to60_mph": "5.5s",
     "top_speed": "166 mph",
-    "img_url": "/assets/images/maserati_ghibli.jpg"
+    "img_url": "/assets/images/maserati_ghibli.jpg",
+    "inFavourites": false
   },
   {
     "manufacturer": "McLaren",
@@ -96,7 +106,8 @@
     "price": "$960,000",
     "from0to60_mph": "2.8s",
     "top_speed": "211 mph",
-    "img_url": "/assets/images/mclaren_senna.png"
+    "img_url": "/assets/images/mclaren_senna.png",
+    "inFavourites": false
   },
   {
     "manufacturer": "Koenigsegg",
@@ -105,6 +116,7 @@
     "price": "$1,900,000",
     "from0to60_mph": "2.5s",
     "top_speed": "250 mph",
-    "img_url": "/assets/images/koenigsegg_regera.jpg"
+    "img_url": "/assets/images/koenigsegg_regera.jpg",
+    "inFavourites": false
   }
 ]

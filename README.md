@@ -63,4 +63,5 @@ Please provide a short summary on your thoughts.
 - >ng g m components/components --flat
 - Crear componente (vinculado al modulo anterior y NO al app.module.ts)
 - >ng g c components/dropdown --skipTests -is
+- >ng g c components/error404 --skipTests -is-
 - Exportar en components.module para utilizarlo en otros componentes -> progress

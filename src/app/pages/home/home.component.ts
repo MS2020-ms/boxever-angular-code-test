@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from 'src/app/interfaces/car.interface';
 import { CarService } from './../../car.service';
 
 @Component({
@@ -7,15 +8,23 @@ import { CarService } from './../../car.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  cars = [];
-  constructor(private carService: CarService) { }
+  cars: Car[];
+
+  constructor(private carService: CarService) {
+    this.cars = [];
+  }
 
   ngOnInit(): void {
     this.carService.list().subscribe(response => {
       this.cars = response;
+      this.sortOn();
     });
-    //!
-    // this.testLocalStorage();
+
+  }
+
+  sortOn() {
+    let field = 'manufacturer';
+    console.log(this.cars.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString())));
   }
 
   addToFavourites(ref) {
