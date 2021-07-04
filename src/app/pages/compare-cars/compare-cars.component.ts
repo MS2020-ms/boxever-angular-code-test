@@ -34,17 +34,12 @@ export class CompareCarsComponent implements OnInit {
   onChange($event) {
     const selectedCar: Car = this.getSelectedCar($event.target.value);
     this.arrSelectedCars.push(selectedCar);
+    this.arrSelectedCars.splice(3, 1);
   }
 
   getSelectedCar(pCar): Car {
     return this.cars.find(car => car.model === pCar);
-    // return car;
   }
 
-  // var numbers = [1, 2, 3, 4, 5];
-  // if (numbers.length > 3) {
-  //   numbers.length = 3;
-  // }
-  // console.log(numbers); // [1, 2, 3]
 
 }

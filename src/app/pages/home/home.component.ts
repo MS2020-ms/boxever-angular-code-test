@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
       this.cars = response;
       this.sortOnAlpha();
     });
-
   }
 
   sortOnAlpha() {
@@ -29,13 +28,11 @@ export class HomeComponent implements OnInit {
   }
 
   sortHighestPrice() {
-    let field = 'price';
     this.cars.sort((a, b) =>
       b.price - a.price)
   }
 
   sortLowestPrice() {
-    let field = 'price';
     this.cars.sort((a, b) =>
       a.price - b.price)
   }
@@ -46,8 +43,15 @@ export class HomeComponent implements OnInit {
     const existingFavourites = localStorage.getItem('favouriteCars');
     if (existingFavourites) {
       try {
+        let list = JSON.parse(existingFavourites);
+        let exist = false;
+        for (let i = 0; i < list.length; i++)
+          if (list[i] == ref) {
+            exist = true;
+            break;
+          }
         const parsedFavourites = JSON.parse(existingFavourites);
-        parsedFavourites.push(ref);
+        if (!exist) parsedFavourites.push(ref);
         localStorage.setItem('favouriteCars', JSON.stringify(parsedFavourites));
       } catch {
         throw ('Failed to parse favourites');
@@ -58,7 +62,6 @@ export class HomeComponent implements OnInit {
   }
 
   onChange($event) {
-    // console.log($event.target.value);
     if ($event.target.value === 'manufacturerName') {
       this.sortOnAlpha();
     } else if ($event.target.value === 'lowestPrice') {
@@ -69,23 +72,5 @@ export class HomeComponent implements OnInit {
   }
 
 }
-
-  // testLocalStorage() {
-  //   //!
-  //   const existingFavourites = localStorage.getItem('favouriteCars');
-  //   const parsedFavourites = JSON.parse(existingFavourites);
-
-  //   console.log(parsedFavourites);
-
-  //   for (let i = 0; i < parsedFavourites.length; i++) {
-
-  //     console.log(parsedFavourites[i]);
-
-  //     if (this.cars.find(item => item.ref === parsedFavourites[i])) {
-  //       console.log('ok');
-
-  //     }
-  //   }
-  // }
 
 

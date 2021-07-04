@@ -1,12 +1,36 @@
 div.card{
-    width: 18rem;
     border-radius: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
 }
 div h5{
     height: 3rem;
 }
+div p.advice{
+    margin-top: 0.62rem;
+}
 div.table-title{
-    margin-top: 16.5rem;
-    height: 10.8rem;
-    width: 10rem;
+    margin-left: 2rem;
+    height: 10.7rem;
+    width: 12rem;
+}
+@media (min-width: 576px) { 
+    div.table-title{
+    margin-top: 30.5%;
+    } 
+}
+@media (min-width: 786px) { 
+    div.table-title{
+    margin-top: 27%;
+    } 
+}
+@media (min-width: 992px) { 
+    div.table-title{
+    margin-top: 24.3%;
+    } 
+}
+@media (min-width: 1200px) { 
+    div.table-title{
+    margin-top: 23.1%;
+    } 
 }
