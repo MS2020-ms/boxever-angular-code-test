@@ -1,1 +1,66 @@
-<p>compare-cars works!</p>
+<div class="container mt-3 mt-md-5">
+    <div class="jumbotron">
+        <h3>Compare Cars</h3>
+        <!-- <app-dropdown></app-dropdown> -->
+        <select class="form-control mb-3" (change)="onChange($event)">
+            <option disable value="all">Select a car...</option>
+            <option [value]="car.model" *ngFor="let car of cars">{{car.manufacturer}} {{car.model}}</option>
+        </select>
+    </div>
+
+    <div class="row ml-1">
+
+        <div class="card table-title text-secondary">
+            <p class="border-top pt-3 pl-3">Price:</p>
+            <p class="border-top pt-3 pl-3">Top Speed:</p>
+            <p class="border-top pt-3 pl-3">From 0 to 60 mph:</p>
+            <div class="card-body border-top"></div>
+        </div>
+
+        <div class="card" *ngFor="let selectedCar of arrSelectedCars">
+            <img class="card-img-top mb-3" src="{{selectedCar.img_url}}"
+                alt="{{selectedCar.manufacturer}} {{selectedCar.model}}">
+
+            <h5 class="ml-4">{{selectedCar.manufacturer}} {{selectedCar.model}}</h5>
+
+            <p class="border-top pt-3 pl-3">{{selectedCar.price | currency}}</p>
+            <p class="border-top pt-3 pl-3">{{selectedCar.top_speed}}</p>
+            <p class="border-top pt-3 pl-3">{{selectedCar.from0to60_mph}}</p>
+
+            <div class="card-body border-top">
+                <a href="#" class="card-link">Card link</a>
+            </div>
+        </div>
+    </div>
+    <!-- <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let selectedCar of arrSelectedCars">
+                <th scope="row">1</th>
+                <td>{{selectedCar.model}}</td>
+                <td>{{selectedCar.price | currency}}</td>
+                <td>{{selectedCar.top_speed}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table> -->
+    {{arrSelectedCars | json}}
+</div>
