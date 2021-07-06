@@ -69,7 +69,7 @@ Things you might consider:
 
 * could TypeScript be used more effectively? 
   
-  
+
     Yes, here are 3 tips to use TypeScript effectively:
     - Use Strict Mode: It’s as simple as providing strict: true in the compiler option in tsconfig.json. It provides stronger guarantees about the types in the code.
     - Don’t Suppress Types: The most common way of suppressing types is through casting to the type any.
@@ -77,3 +77,5 @@ Things you might consider:
 
 Please provide a short summary on your thoughts.
 
+
+App deploy in netlify -> Visit : https://boxever-angular-code-test.netlify.app
