@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Car } from 'src/app/interfaces/car.interface';
 import { CarService } from 'src/app/services/car.service';
-import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-compare-cars',
   templateUrl: './compare-cars.component.html',
   styleUrls: ['./compare-cars.component.scss']
 })
-export class CompareCarsComponent implements OnInit {
+export class CompareCarsComponent implements OnInit, OnDestroy {
 
   cars: Car[];
   arrSelectedCars: Car[];
+  subscription: Subscription;
 
-  constructor(private carService: CarService, private searchService: SearchService) {
+  constructor(private carService: CarService) {
     this.cars = [];
     this.arrSelectedCars = [];
   }
@@ -23,7 +24,8 @@ export class CompareCarsComponent implements OnInit {
       this.cars = response;
       this.sortOnAlpha();
     });
-
+    // Observable:
+    this.getCars();
   }
 
   sortOnAlpha() {
@@ -41,5 +43,19 @@ export class CompareCarsComponent implements OnInit {
     return this.cars.find(car => car.model === pCar);
   }
 
+  // Observable:
+  getCars() {
+    this.subscription = this.carService.getCars$()
+      .subscribe(response => {
+        console.log(response);
+        this.cars = response;
+        console.log(this.cars);
+      });
+  }
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 
 }

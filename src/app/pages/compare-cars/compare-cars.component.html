@@ -6,8 +6,8 @@
         </div>
 
         <!-- <app-dropdown></app-dropdown> -->
-        <select class="form-control mb-3" (change)="onChange($event)">
-            <option selected disabled>Select a car...</option>
+        <select class="form-control mb-3" id="select" (change)="onChange($event)">
+            <option selected disabled value="0">Select a car...</option>
             <option [value]="car.model" *ngFor="let car of cars">{{car.manufacturer}} {{car.model}}</option>
         </select>
     </div>
@@ -37,4 +37,5 @@
         </div>
     </div>
     <!-- {{arrSelectedCars | json}} -->
+    <!-- {{cars | json}} -->
 </div>

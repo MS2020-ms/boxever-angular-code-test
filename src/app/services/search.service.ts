@@ -7,7 +7,5 @@ export class SearchService {
 
   constructor() { }
 
-
-
 }
 

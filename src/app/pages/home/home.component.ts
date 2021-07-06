@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Car } from 'src/app/interfaces/car.interface';
 import { SearchService } from 'src/app/services/search.service';
 import { CarService } from './../../services/car.service';
@@ -19,7 +19,10 @@ export class HomeComponent implements OnInit {
     this.carService.list().subscribe(response => {
       this.cars = response;
       this.sortOnAlpha();
+      // Observable:
+      this.sendCarsArr(this.cars);
     });
+
   }
 
   sortOnAlpha() {
@@ -37,9 +40,13 @@ export class HomeComponent implements OnInit {
       a.price - b.price)
   }
 
+  // Observable:
+  sendCarsArr(pCarsArr) {
+    this.carService.reciveCarsArr(pCarsArr);
+  }
+
   addToFavourites(ref) {
     this.cars.find(item => item.ref === ref).inFavourites = true;
-    //!
     const existingFavourites = localStorage.getItem('favouriteCars');
     if (existingFavourites) {
       try {
